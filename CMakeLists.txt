@@ -11,6 +11,9 @@ add_library(${PROJECT_NAME}
   src/cstl.c
 )
 
+# link math library, very weird indeed
+target_link_libraries(${PROJECT_NAME} m)
+
 add_executable(debug src/debug.c)
 target_link_libraries(debug
   PUBLIC
