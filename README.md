@@ -2,7 +2,6 @@
 revising c by implementing c++'s standard template library in c without any libraries 
 
 ## things that must be there
-- iter.h
 - list.h
   - `list`
   - `forward_list`
