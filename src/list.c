@@ -6,13 +6,13 @@ struct list *new_list(size_t n, void **values) {
   l->size = (size_t) 0;
 
   for (size_t t = 0; t < n; ++t) {
-    push_back(l, values[t]);
+    list_push_back(l, values[t]);
   }
 
   return l;
 }
 
-void push_front(struct list *l, void *v) {
+void list_push_front(struct list *l, void *v) {
   struct listnode *node = new_ptr(struct listnode);
   node->value = v;
   node->next = l->head;
@@ -25,7 +25,7 @@ void push_front(struct list *l, void *v) {
   ++(l->size);
 }
 
-void push_back(struct list *l, void *v) {
+void list_push_back(struct list *l, void *v) {
   struct listnode *node = new_ptr(struct listnode);
   node->value = v;
   node->next = NULL;
@@ -38,19 +38,19 @@ void push_back(struct list *l, void *v) {
   ++(l->size);
 }
 
-void *front(struct list *l) {
+void *list_front(struct list *l) {
   assert(l != NULL && "nullptr sent in front");  
   if (l->head == NULL) { return NULL; }
   return l->head->value;
 }
 
-void *back(struct list *l) {
+void *list_back(struct list *l) {
   assert(l != NULL && "nullptr sent in back");  
   if (l->tail == NULL) { return NULL; }
   return l->tail->value;
 }
 
-void *pop_front(struct list *l) {
+void *list_pop_front(struct list *l) {
   assert(l != NULL && "nullptr sent in pop_front");  
   if (l->head == NULL) return NULL;
 
@@ -61,7 +61,7 @@ void *pop_front(struct list *l) {
   return v;
 }
 
-void *pop_back(struct list *l) {
+void *list_pop_back(struct list *l) {
   assert(l != NULL && "nullptr sent in pop_back");  
   if (l->tail == NULL) return NULL;
 

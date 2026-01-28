@@ -18,13 +18,13 @@ struct list {
 
 struct list *new_list(size_t /* n */, void ** /* values */);
 
-void push_front(struct list * /* l */, void * /* v */);
-void push_back(struct list * /* l */, void * /* v */);
+void list_push_front(struct list * /* l */, void * /* v */);
+void list_push_back(struct list * /* l */, void * /* v */);
 
-void *front(struct list * /* l */);
-void *back(struct list * /* l */);
+void *list_front(struct list * /* l */);
+void *list_back(struct list * /* l */);
 
-void *pop_front(struct list * /* l */);
-void *pop_back(struct list * /* l */);
+void *list_pop_front(struct list * /* l */);
+void *list_pop_back(struct list * /* l */);
 
 #endif
