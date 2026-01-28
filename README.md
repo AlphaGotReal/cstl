@@ -4,7 +4,6 @@ revising c by implementing c++'s standard template library in c without any libr
 ## things that must be there
 - list.h
   - `list`
-  - `forward_list`
 - utils.h
   - `min`
   - `max`
