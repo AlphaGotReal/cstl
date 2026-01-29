@@ -13,6 +13,7 @@ include_directories(include)
 add_library(${PROJECT_NAME}
   src/cstl.c
   src/list.c
+  src/utils.c
 )
 
 # link math library, very weird indeed
